@@ -1,0 +1,101 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
+@font-face {
+        font-family: 'NanumSquareNeo-Variable';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+}
+
+body{
+    background-color: #153C20;
+    font-family: 'NanumSquareNeo-Variable';
+}
+header {
+    height: 75px;
+    padding: 1rem;
+    color: white;
+    background: #153C20;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+   
+    left: 0;
+    right: 0;
+    border-bottom: #fff solid 2px;
+}
+h1{
+    font-family: 'Kumar One', cursive;
+    padding-left: 30px;
+}
+span{
+    display: inline-block;
+    padding: 0px 50px;
+}
+
+ */
+
+ :root {
+    --bgcolor: #242582;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .page-header {
+    background-color: var(--bgcolor);
+    padding: 1.3rem;
+  
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-bar a {
+    color: white;
+    padding: 1.3rem;
+    cursor: pointer;
+  }
+
+ .nav-bar a:hover {
+    background-color: #5052db;
+  }
+  
+  .nav-bar a.active {
+    background-color: #f64c72;
+  }
+  
+  .menu-icon {
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .nav-bar {
+        display: none;
+        position: absolute;
+        top: 3.7rem;
+        left: 0;
+        width: 100%;
+        background-color: var(--bgcolor);
+        text-align: center;
+    }
+  
+    .nav-bar.responsive {
+        display: block;
+    }
+  
+    .nav-bar a {
+        display: block;
+    }
+  
+    .menu-icon {
+        display: block;
+        z-index: 1;
+    }
+  }
