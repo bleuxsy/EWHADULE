@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
+@font-face {
+        font-family: 'NanumSquareNeo-Variable';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+}
+
 body{
-    height: 500000px;
-    background-color: 'black';
+    background-color: #153C20;
+    font-family: 'NanumSquareNeo-Variable';
 }
 header {
     height: 75px;
     padding: 1rem;
     color: white;
-    background: rgb(2, 69, 17);
+    background: #153C20;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
@@ -17,4 +25,14 @@ header {
     /* width: 100% */
     left: 0;
     right: 0;
+    border-bottom: #fff solid 2px;
 }
+h1{
+    font-family: 'Kumar One', cursive;
+    padding-left: 30px;
+}
+span{
+    display: inline-block;
+    padding: 0px 50px;
+}
+
