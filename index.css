@@ -38,8 +38,12 @@ span{
          font-weight: normal;
          font-style: normal;
  }
- :root {
+ /* :root {
   --bgcolor: #153C20;
+} */
+
+body{
+  background-color: #153C20;
 }
 
 * {
@@ -49,26 +53,34 @@ span{
 
 .page-header {
   background-color: var(--bgcolor);
-  padding: 1.3rem;
-
+  /* padding: 1.3rem; */
+  color: white;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width:100%;
+  height:105px;
 }
 
-.nav-bar a {
+.nav{
+  margin-right:45px;
+}
+.nav > a {
   color: white;
   padding: 1.3rem;
   cursor: pointer;
   font-family: 'NanumSquareNeo-Variable';
 }
 
-.nav-bar a:hover {
+.Logo a:hover {
   background-color: #5052db;
 }
 
-.nav-bar a.active {
+.Logo a.active {
   background-color: #153C20;
   font-family: 'Kumar One', cursive;
+  font-size:30px;
+  margin-left: 35px;
 }
 
 .menu-icon {
@@ -76,18 +88,20 @@ span{
   cursor: pointer;
   display: none;
 }
-#navigation-bar{
+
+
+/* #navigation-bar{
   display: flex;
   justify-content: space-between;
    align-items: center;
 }
-
 .nav{
  position : absolute;
   right: 800px;
-}
+} */
+
 @media screen and (max-width: 700px) {
-  .nav-bar {
+  .nav {
       display: none;
       position: absolute;
       top: 3.7rem;
@@ -97,11 +111,11 @@ span{
       text-align: center;
   }
 
-  .nav-bar.responsive {
+  .Logo.responsive {
       display: block;
   }
 
-  .nav-bar a {
+  .Logo a {
       display: block;
   }
 
