@@ -31,6 +31,8 @@ span{
 }
 
  */
+
+
  @import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
  @font-face {
          font-family: 'NanumSquareNeo-Variable';
@@ -38,9 +40,6 @@ span{
          font-weight: normal;
          font-style: normal;
  }
- /* :root {
-  --bgcolor: #153C20;
-} */
 
 body{
   background-color: #153C20;
@@ -53,33 +52,40 @@ body{
 
 .page-header {
   background-color: var(--bgcolor);
-  /* padding: 1.3rem; */
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width:100%;
   height:105px;
+  border-bottom: #fff solid 1px;
 }
 
 .nav{
-  margin-right:45px;
+  margin-right:30px;
+  display:flex;
+  width:400px;
+  justify-content: space-evenly;
 }
 .nav > a {
   color: white;
-  padding: 1.3rem;
+  padding: 1.5rem;
   cursor: pointer;
   font-family: 'NanumSquareNeo-Variable';
 }
 
-.Logo a:hover {
-  background-color: #5052db;
+.nav > a:hover {
+  background-color: #FCF6F6;
+  opacity: 0.8;
+  color:#153C20;
 }
-
+.Logo{
+  margin-top:8px;
+}
 .Logo a.active {
   background-color: #153C20;
   font-family: 'Kumar One', cursive;
-  font-size:30px;
+  font-size:25px;
   margin-left: 35px;
 }
 
