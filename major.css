@@ -17,16 +17,17 @@ body{
   background-color: white;
   border-radius: 15px;
   display: inline-block;  
-  margin: 30px 30px;
+  margin: 30px 50px;
   font-size: 20px;
 }
 #explain{
   margin: 10px 10px;
 }
 #explain > p{
+  color:#E1E1E1;
   margin: 10px 50px;
   padding: 5px 10px;
-  font-size: 20px;
+  font-size: 17px;
 }
 iframe{
   margin-top: 30px;
