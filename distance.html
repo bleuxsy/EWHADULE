@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="index.css" rel="stylesheet">
+  <link href="distance.css" rel="stylesheet">
+  <script src="index.js"></script>
+  <script src="distance.js"></script>
+
+
+  <title>Ewhadule</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="page-header">
+    <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+      <i class="fa fa-bars"></i>
+    </a>
+
+      <div id="navigation-bar" class="Logo">
+      <a class="active"> EWHADULE </a>
+      </div>
+      <div class = "nav">
+        <a> 강의실 </a>
+        <a> 시간표 </a>
+        <a> 수강신청 </a>
+      </div>
+  </div>
+<h1 style="position:absolute;color: white;font-size: 27px;font-family: 'NanumSquareNeo-Variable';left: 100px;top: 180px;">
+    두 개의 건물을 선택해주세요
+</h1>
+<div class="src_dst">
+    <div class="distance_src" >
+    <form action="#">
+        <label for="src">출발 위치</label>
+        <select name="distance" id="src">
+        <option value="select">Select</option>
+        <option value="Eltec">엘텍 공과 대학</option>
+        <option value="front">정문</option>
+        <option value="back">후문</option>
+        <option value="auditorium">대강당</option>
+        <option value="subway">이대역</option>
+        <option value="ECC">ECC</option>
+        <option value="student union">학생 문화관</option>
+        <option value="posco">이화포스코관</option>
+        <option value="art">조형예술관</option>
+        <option value="edu">교육관</option>
+        </select>
+    </form>
+    </div>
+    <div class="distance_dst">
+    <form action="#">
+        <label for="dst">도착 위치</label>
+        <select name="distance" id="dst">
+        <option value="select">Select</option>
+        <option value="Eltec">엘텍 공과 대학</option>
+        <option value="front">정문</option>
+        <option value="back">후문</option>
+        <option value="auditorium">대강당</option>
+        <option value="subway">이대역</option>
+        <option value="ECC">ECC</option>
+        <option value="student union">학생 문화관</option>
+        <option value="posco">이화포스코관</option>
+        <option value="art">조형예술관</option>
+        <option value="edu">교육관</option>
+        </select>
+    
+    </form>
+    </div>
+    <a href="" title="Button border blue/green" class="button btnBorder btnBlueGreen"style="left: 1200px;top:-20px"onclick="getSelectedValues()">search</a>
+
+</div>
+<iframe src="http://kko.to/3v2s8E1YQL" style="position:absolute;left:300px; top:400px;width:1000px;height:600px;"></iframe>
+<!--
+<div id="kakaomap" style="position:absolute; left:300px; top:400px;">
+<div id="daumRoughmapContainer1687419363378" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+
+<script charset="UTF-8" >
+	new daum.roughmap.Lander({
+		"timestamp" : "1687419363378",
+		"key" : "2faix",
+        "mapposition" : "absolute",
+        
+		"mapWidth" : "1000",
+		"mapHeight" : "600"
+	}).render();
+</script>
+</div>
+-->
+<!--<div class="rectangle">
+<h1 style="position:absolute;color: white;font-size: 35px;font-family: 'NanumSquareNeo-Variable';left: 30%;top:35%;">도보 약 00분 (00m) 소요됩니다. </h1>
+<h2 style="position:absolute;color: white;font-size: 20px;font-family: 'NanumSquareNeo-Variable';left: 30%;top:60%;">*지름길 :</h2>
+
+<div class="box" >
+    <img class="map" src="map.png">
+  </div>
+</div>-->
+
+</body>
+
+</html>

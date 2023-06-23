@@ -1,0 +1,130 @@
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
+ @font-face {
+         font-family: 'NanumSquareNeo-Variable';
+         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+         font-weight: normal;
+         font-style: normal;
+ }
+
+body{
+  background-color: #153C20;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+    width: 200px;
+    height: 200px; 
+    border-radius: 30%;
+    /*overflow: hidden;*/
+}
+.profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+h2{
+position:absolute;
+font-size:20px;
+align-items: center;
+top: 250px;
+left:70px;
+color:white;
+font-family: 'NanumSquareNeo-Variable';
+}
+h3{
+    position:absolute;
+    font-size:18px;
+    align-items: center;
+    line-height: 1.5;
+    width:400px;
+    top: 280px;
+    left:-100px;
+    text-align: center;
+    color:white;
+    font-family: 'NanumSquareNeo-Variable';
+    }
+.page-header {
+  background-color: var(--bgcolor);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  height:105px;
+  border-bottom: #fff solid 1px;
+}
+
+.nav{
+  margin-right:30px;
+  display:flex;
+  width:400px;
+  justify-content: space-evenly;
+}
+.nav > a {
+  color: white;
+  padding: 1.5rem;
+  cursor: pointer;
+  font-family: 'NanumSquareNeo-Variable';
+}
+
+.nav > a:hover {
+  background-color: #FCF6F6;
+  opacity: 0.8;
+  color:#153C20;
+}
+.Logo{
+  margin-top:8px;
+}
+.Logo a.active {
+  background-color: #153C20;
+  font-family: 'Kumar One', cursive;
+  font-size:25px;
+  margin-left: 35px;
+}
+
+.menu-icon {
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+
+/* #navigation-bar{
+  display: flex;
+  justify-content: space-between;
+   align-items: center;
+}
+.nav{
+ position : absolute;
+  right: 800px;
+} */
+
+@media screen and (max-width: 700px) {
+  .nav {
+      display: none;
+      position: absolute;
+      top: 3.7rem;
+      left: 0;
+      width: 100%;
+      background-color: var(--bgcolor);
+      text-align: center;
+  }
+
+  .Logo.responsive {
+      display: block;
+  }
+
+  .Logo a {
+      display: block;
+  }
+
+  .menu-icon {
+      display: block;
+      z-index: 1;
+  }
+}

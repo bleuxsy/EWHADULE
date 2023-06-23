@@ -1,0 +1,268 @@
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
+ @import url(https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700);
+
+ @font-face {
+         font-family: 'NanumSquareNeo-Variable';
+         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+         font-weight: normal;
+         font-style: normal;
+ }
+
+body{
+  background-color: #153C20;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.page-header {
+  background-color: var(--bgcolor);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  height:105px;
+  border-bottom: #fff solid 1px;
+}
+.box {
+    width: 1150px;
+    height: 1150px; 
+    position:absolute;
+    top: 400px;
+    border-radius: 10%;
+    overflow: hidden;
+    background-color: white;
+    
+}
+.map{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: white;
+}
+.src_dst{
+
+left: 110px;
+top: 300px;
+
+position:absolute;color: white;
+font-size: 25px;
+font-family: 'NanumSquareNeo-Variable';
+
+}
+
+select {
+    /*margin-bottom: 10px;
+    margin-top: 10px;
+ */   font-family: 'NanumSquareNeo-Variable';
+width:200px;
+height: 32px;
+font-size: 18px;
+    outline: 0;
+    background: white;
+    color: #153C20;
+    border: 1px solid white;
+    padding: 4px;
+    border-radius: 9px;
+  }
+  .distance_src {
+   position: absolute;
+    width:500px;
+    left: 150px;
+   
+  }
+  .distance_dst{
+    
+    position:absolute;
+    width:500px;
+    left: 750px;
+   
+  }
+  .rectangle
+  {
+    position:absolute;
+    width: 1200px;
+    height: 300px;
+    left: 200px;;
+    top: 400px;
+    border:2px solid white;
+    border-radius: 9px;
+
+
+
+  }
+.nav{
+  margin-right:30px;
+  display:flex;
+  width:400px;
+  justify-content: space-evenly;
+}
+.nav > a {
+  color: white;
+  padding: 1.5rem;
+  cursor: pointer;
+  font-family: 'NanumSquareNeo-Variable';
+}
+
+.nav > a:hover {
+  background-color: #FCF6F6;
+  opacity: 0.8;
+  color:#153C20;
+}
+.Logo{
+  margin-top:8px;
+}
+.Logo a.active {
+  background-color: #153C20;
+  font-family: 'Kumar One', cursive;
+  font-size:25px;
+  margin-left: 35px;
+}
+
+.menu-icon {
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+
+/* #navigation-bar{
+  display: flex;
+  justify-content: space-between;
+   align-items: center;
+}
+.nav{
+ position : absolute;
+  right: 800px;
+} */
+
+@media screen and (max-width: 700px) {
+  .nav {
+      display: none;
+      position: absolute;
+      top: 3.7rem;
+      left: 0;
+      width: 100%;
+      background-color: var(--bgcolor);
+      text-align: center;
+  }
+
+  .Logo.responsive {
+      display: block;
+  }
+
+  .Logo a {
+      display: block;
+  }
+
+  .menu-icon {
+      display: block;
+      z-index: 1;
+  }
+}
+Result Skip Results Iframe
+EDIT ON
+
+/*
+.fonts {
+  font-family: 'Josefin Slab', serif;
+}
+*/
+
+body {
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: #333;
+  background: #ececec;
+  overflow-y: scroll;
+}
+
+p {
+  margin-bottom: 0.5em;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #00AE68;
+}
+
+.clear {
+  clear: both;
+}
+
+.pageTitle {
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1em;
+  color: #00AE68;
+}
+
+.pageSubTitle {
+  margin-bottom: 0.5em;
+  font-size: 1.3em;
+  font-weight: 700;
+  line-height: 1em;
+  color: #222;
+}
+
+.articleTitle {
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1em;
+  color: #222;
+}
+
+.wrapper {
+  width: 600px;
+  margin: 20px auto;
+}
+
+.container {
+  padding-top: 1em;
+  margin-top: 1em;
+  border-top: 
+    solid
+    1px
+    #CCC;
+}
+
+a.button {
+  display: block;
+  position: relative;
+  float: left;
+  width: 120px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF;
+  border-radius: 5px;
+  transition: all 0.2s ;
+}
+
+.btnBlueGreen {
+  background: #00AE68;
+}
+
+
+/* BORDER */
+.btnBlueGreen.btnBorder {
+  box-shadow: 0px 0px 0px 0px #21825B;
+}
+
+.btnBlueGreen.btnBorder:hover {
+  box-shadow: 0px 0px 0px 5px #21825B;
+}
+
+
+
+
