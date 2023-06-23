@@ -134,6 +134,7 @@ th.text-left {
   /* text-align: left; */
   background-color:#206433;
   color: #fff;
+  font-size: 18px;
 }
 
 /* th.text-center {
@@ -146,6 +147,7 @@ th.text-right {
 
 td.text-left {
   text-align: left;
+  font-size:16px;
 }
 
 td.text-center {
