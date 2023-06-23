@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <nav class="first_nav">
+                <h6 class="main_slo">벗들의 시간표 지킴이</h6>
+                <h1 class="main_h1">EWHADULE</h1>
+            </nav>
+            <nav class="sec_nav">
+                <span>강의실</span>
+                <span>시간표</span>
+                <span>수강신청</span>
+            </nav>
+
+            <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+                <i class="fa fa-bars"></i>
+            </a>
+
+        </header>
+    </body>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
+        @font-face {
+            font-family: 'NanumSquareNeo-Variable';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body{
+            background-color: #153C20;
+            font-family: 'NanumSquareNeo-Variable';
+        }
+        header {
+            color: white;
+            background: #153C20;
+            font-weight: bold;
+        }
+        .main_slo{
+            margin-top:20px;
+            font-size: 16px;
+        }
+        .main_h1{
+            margin-top:-18px;
+            margin-bottom: 18px;
+            font-size: 40px;
+        }
+        .first_nav{
+            text-align: center;
+        }
+        .sec_nav{
+            border-bottom: #fff solid 2px;
+            border-top: #fff solid 2px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+        span{
+            padding: 25px 12%;
+        }
+        span:hover{
+            background-color: beige;
+            color:#153C20;
+        }
+        a{
+            display:none;
+        }
+
+        @media screen and (max-width: 700px){
+            .sec_nav{
+                display:none;
+            }
+            a{
+                display: block;
+                float: right;
+                padding: 15px 10% 15px 90%;
+                border-bottom: #fff solid 2px;
+                border-top: #fff solid 2px;
+            }
+        }
+    </style>
+</html>
