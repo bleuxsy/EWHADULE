@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
+ @font-face {
+         font-family: 'NanumSquareNeo-Variable';
+         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+         font-weight: normal;
+         font-style: normal;
+ }
+
+body{
+  background-color: #153C20;
+  color: white;
+  font-family: 'NanumSquareNeo-Variable';
+}
+#tip{
+  color: gray;
+  font-size: 15px;
+  font-weight: 900;
+}
+.everytimeContents{
+  padding: 10px 10px;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+}
+.everytimeContents>p{
+  margin: 10px 50px;
+  padding: 5px 10px;
+}
+#title{
+  padding: 20px;
+  color: #153C20;
+  background-color: white;
+  border-radius: 15px;
+  display: inline-block;  
+  margin: 30px 30px;
+}
+.everytimePhone{
+  width: 350px;
+  margin: auto;
+}
+.explain{
+  display: flex;
+  margin: 30px 0px;
+  align-items: flex-start;
+  padding: 20px 0px;
+  position: sticky;
+  top: 15%;
+  justify-content: center;
+}
+.contents{
+  top: 50%;
+  color:black;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 514px;
+  height: 300px;
+  margin: auto;
+  margin-top:0;
+}
+.contents > h5{
+  font-size: 30px;
+  margin:10px 0px;
+  font-weight: bold;
+}
+.contents > p{
+  font-size:20px;
+  word-break: keep-all;
+}
+.image{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+#step1{
+  visibility: visible;
+}
+
+#step2{
+  opacity: 0;
+}
+#step3{
+  opacity: 0;
+}
+#step4{
+  opacity: 0;
+}
+#step5{
+  opacity: 0;
+}
+.status{
+  position: sticky;
+  top: 7%;
+  height: 20px;
+  width: 80%;
+  background-color: white;
+  border-radius: 20px;
+  margin: auto;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2) inset;
+}
+.statusBar{
+  height: 100%;
+  width: 0%;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b4e391+0,61c419+100 */
+  background: #b4e391; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #b4e391 0%, #61c419 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #b4e391 0%,#61c419 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #b4e391 0%,#61c419 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#61c419',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  border-radius: 20px;
+}
+.slide{
+  display: none;
+}
+#toTop{
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  font-size: 20px;
+  color: #153C20;
+  background-color: blanchedalmond;
+  border:none;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+#toTop:hover, #toTop:focus{
+  color:#153C20;
+  background-color: rgb(189, 168, 136);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2) inset;
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>에타마법사 활용법</title>
+    <link href="./magician.css" rel="stylesheet">
+    <link href="./animation.css" rel = "stylesheet">
+  
+  </head>
+  <body>
+    <div class="everytimeContents">
+      <h3 id="title">에타 마법사란?</h3>
+      <p>수강신청을 실패할 가능성을 염두에 뒤 Plan B 시간표를 쉽게 만들어주는 에브리타임 기능</p>
+      <p style="margin-bottom: 50px;">원하는 과목을 그룹마다 1개 이상 담으면 각 그룹에서 과목을 1개씩 꺼내 경우의 수를 조합하여 만들어질 수 있는 모든 시간표를 보여준다.</p>
+      <div class = "status mx-auto mt-5">
+        <div class = "statusBar">
+
+        </div>
+      </div>
+      <div id="step1" class="explain">
+        <div class="contents">
+          <h5 class="name">1. 시간표 탭으로 이동</h5>
+          <p>에브리타임 홈 화면 하단에 있는 메뉴 중 왼쪽 두번째에 위치한 '시간표'를 눌러 시간표 화면으로 이동한다.</p>
+        </div>
+        <div class="image">
+          <img class="everytimePhone" src="./images/step1.png" alt="시간표로 이동">
+        </div>
+      </div>
+  
+      <div id="step2" class="explain">
+        <div class="contents">
+          <h5 class="name">2. 시간표 마법사 실행</h5>
+          <p>새 시간표 만들기를 통해 시간표를 만들어준다.</p>
+          <p>만들어진 시간표 상단의 우측 상단 첫번째 메뉴인 '+' 버튼을 누른다.</p>
+          <p>화면 우측 상단의 첫번째 메뉴인 '마법사' 버튼을 누른다.</p>
+        </div>
+        <div class="image">
+          <img id="step2-1" class="everytimePhone" src="./images/step2.png" alt="새 시간표">
+          <img id="step2-2" class="everytimePhone slide" src="./images/step3.png" alt="시간표 수업추가 버튼">
+          <img id="step2-3" class="everytimePhone slide" src="./images/step4.png" alt="시간표 마법사로 이동">
+        </div>
+      </div>
+  
+      <div id="step3" class="explain">
+        <div class="contents">
+          <h5 class="name">3. 마법사로 수업 구성</h5>
+          <p>각 그룹에 있는 '+' 버튼을 통해 그룹을 구성한다.</p>
+          <p id="tip">tip!) 시간표 마법사는 각 그룹에 넣어둔 강의들을 1개씩 선택하여 구성할 수 있는 모든 시간표의 경우의 수를 보여주기 때문에 학수번호와 강의 시간이 겹치는 강의들은 각 그룹에 1개만 넣어주는게 좋다.</p>
+          <p>그룹을 강의들로 구성한 뒤 우측 상단에 위치한 '결과 보기' 버튼을 누른다.</p>
+        </div>
+        <div class="image">
+          <img id="step3-1" class="everytimePhone" src="./images/step5.png" alt="시간표 마법사">
+          <img id="step3-2" class="everytimePhone slide" src="./images/step6.png" alt="시간표 마법사 구성">
+          
+        </div>
+      </div>
+  
+      <div id="step4" class="explain">
+        <div class="contents">
+          <h5 class="name">4. 시간표 저장</h5>
+          <p>시간표 마법사로 만들어진 시간표들 중 마음에 드는 시간표를 골라 저장해준다.</p>
+        </div>
+        <div class="image">
+          <img id="step4-1" class="everytimePhone" src="./images/step7.png" alt="시간표 마법사 결과">
+          <img id = "step4-2" class="everytimePhone slide" src="./images/step8.png" alt="시간표 저장">
+          
+        </div>
+      </div>
+  
+      <div id="step5" class="explain">
+        <div class="contents">
+          <h5 class="name">5. 시간표 수정</h5>
+          <p>시간표 마법사로 완성된 시간표들 중 가장 마음에 드는 시간표로 더 세부적으로 수정해준다.</p>
+        </div>    
+        <div class="image">
+          <img id="step5-1" class="everytimePhone" src="./images/step9.png" alt="시간표 수정">
+        </div>  
+      </div>
+      <div id="goToTop">
+        <a href="./magician.html"><button id="toTop">top</button></a>
+      </div>
+    </div>
+    
+  </body>
+  <script src="./magician.js" charset="UTF-8"></script>
+  <script>
+    var winH = window.innerHeight; //500
+    const statusCare = document.querySelector(".statusBar");
+    
+  document.addEventListener('scroll', function() {
+    var currentScrollValue = document.documentElement.scrollTop;
+    console.log('currentScrollValue is ' + currentScrollValue);
+    var progress = (currentScrollValue/(document.body.scrollHeight-winH))*100;
+    console.log('status width is ' + progress);
+    statusCare.style.width = progress + "%"; 
+    if(progress < 20){
+      step1Page.style.opacity = "1";
+      step2Page.style.opacity = "0";
+      step3Page.style.opacity = "0";
+      step4Page.style.opacity = "0";
+      step5Page.style.opacity = "0";
+      if(progress>18){
+        step1Page.style.opacity = ((1-((progress-18)/2))*100) + "%";
+        step2Page.style.opacity = ((progress-18)/2*100)+"%";
+        step3Page.style.opacity = "0";
+        step4Page.style.opacity = "0";
+        step5Page.style.opacity = "0";
+      }
+    }
+    else if(progress >= 20 && progress <50){
+      step1Page.style.opacity = "0";
+      step2Page.style.opacity = "1";
+      step3Page.style.opacity = "0";
+      step4Page.style.opacity = "0";
+      step5Page.style.opacity = "0";
+        if(progress < 34){
+          img2_1.style.display = "block";
+          img2_2.style.display = "none";
+          img2_3.style.display = "none";
+        }
+        else if(progress>34 && progress <42){
+          img2_1.style.display = "none";
+          img2_2.style.display = "block";
+          img2_3.style.display = "none";
+        }
+        else if(progress>42){
+          img2_1.style.display = "none";
+          img2_2.style.display = "none";
+          img2_3.style.display = "block";
+        }
+        if(progress>48){
+        step2Page.style.opacity = ((1-((progress-38)/2))*100) + "%";
+        step3Page.style.opacity = ((progress-38)/2*100)+"%";
+        step1Page.style.opacity = "0";
+        step4Page.style.opacity = "0";
+        step5Page.style.opacity = "0";
+      }
+    }
+    else if(progress >=50 && progress <70){
+      step1Page.style.opacity = "0";
+      step2Page.style.opacity = "0";
+      step3Page.style.opacity = "1";
+      step4Page.style.opacity = "0";
+      step5Page.style.opacity = "0";
+        if(progress < 60){
+          img3_1.style.display = "block";
+          img3_2.style.display = "none";
+        }
+        else if(progress>60){
+          img3_1.style.display = "none";
+          img3_2.style.display = "block";
+        }
+        if(progress>68){
+        step3Page.style.opacity = ((1-((progress-58)/2))*100) + "%";
+        step4Page.style.opacity = ((progress-58)/2*100)+"%";
+        step1Page.style.opacity = "0";
+        step2Page.style.opacity = "0";
+        step5Page.style.opacity = "0";
+      }
+
+    }
+    else if(progress >=70 && progress<93){
+      step1Page.style.opacity = "0";
+      step2Page.style.opacity = "0";
+      step3Page.style.opacity = "0";
+      step4Page.style.opacity = "1";
+      step5Page.style.opacity = "0";
+        if(progress < 82){
+          img4_1.style.display = "block";
+          img4_2.style.display = "none";
+        }
+        else if(progress>82){
+          img4_1.style.display = "none";
+          img4_2.style.display = "block";
+        }
+        if(progress>91){
+        step4Page.style.opacity = ((1-((progress-78)/2))*100) + "%";
+        step5Page.style.opacity = ((progress-78)/2*100)+"%";
+        step2Page.style.opacity = "0";
+        step1Page.style.opacity = "0";
+        step3Page.style.opacity = "0";
+      }
+
+    }
+    else if(progress >=93){
+      step1Page.style.opacity = "0";
+      step2Page.style.opacity = "0";
+      step3Page.style.opacity = "0";
+      step4Page.style.opacity = "0";
+      step5Page.style.opacity = "1";
+    }
+});
+</script>
+  <!-- <script>
+    const statusCare = document.querySelector(".statusBar");
+    const step1Page = document.querySelector("#step1");
+    const step2Page = document.querySelector('#step2');
+    const step2H = step2Page.getBoundingClientRect().top;
+    const step3Page = document.querySelector('#step3');
+    const step3H = step3Page.getBoundingClientRect().top;
+    const step4Page = document.querySelector('#step4');
+    const step4H = step4Page.getBoundingClientRect().top;
+    const step5Page = document.querySelector('#step5');
+    const step5H = step5Page.getBoundingClientRect().top;
+
+    window.onscroll = ()=>{
+    const parentDiv = document.querySelector('.parent_div');
+    const viewportHeight = window.innerHeight;
+    const viewport15 = viewportHeight*0.1;
+    if(viewport15 == step2H){
+      step1Page.style.WebkitAnimation = "fadeOut 1s";
+      step1Page.style.animation = "fadeOut 1s";
+      setTimeout(() => {
+        step2Page.style.WebkitAnimation = "fadeIn 1s";
+        step2Page.style.animation = "fadeIn 1s";
+        setTimeout(() => {
+        step1Page.style.display = "hidden";
+        step2Page.style.display = "visibile";
+        }, 450);
+      }, 450);
+    }
+  }
+  </script> -->
+</html>
