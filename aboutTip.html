@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <nav class = "chrome">
+                <h3>크롬팝업해제</h3>
+                <div>
+                    1. 크롬 설정<br>
+                    2. 사이드 바에서 개인정보 보호 및 보안 클릭<br>
+                    3. 사이트 설정 클릭 <br>
+                    4. 팝업 및 리디렉션 <br>  
+                    5. 사이트에서 팝업을 전송하고 리디렉션을 사용할 수 있음
+                </div>
+            </nav>
+
+            <nav class = "num">
+                <h3>대기순번제 vs 취소지연제</h3>
+                <div>
+                    <b>대기순번제<br></b>
+                    정원이 마감된 교과목을 신청시, 선착순으로 대기 순번 부여하여 수강신청 진행<br>
+                    앞번호로 대기 중인 학생들에게 우선권이 주어짐<br>
+                    대기 교과목을 취소하고 다시 신청하는 경우에는 마지막 대기 번호가 본인의 새로운 대기 번호로 부여되므로 주의<br><br>
+                    <b>취소지연제<br></b>
+                    정원이 마감된 교과목의 수강 취소자가 발생해 잔여석이 생기더라도 즉시 수강신청이 가능한 것이 아님.<br>
+                    일정 기간 이후에 취소 인원 잔여석에 대한 수강 신청이 가능하도록 함<br>
+                    강의 취소 인원의 잔여석은 9시-17시 동안 30분 단위로 오픈되며,<br> 매 시간마다 시도해야함.
+                </div>
+            </nav>
+
+            <nav class = "chapel">
+                <h3>채플 수강신청</h3>
+                <div>
+                    1. 이미 수강신청된 채플을 취소하기<br>
+                    2. 원하는 시간과 요일의 채플 신청하기<br><br>
+                    <b>채플 좌석 확인법<br></b>
+                    ewha앱 → 훈련학점좌석조회 이화포탈정보시스템 → 유레타통합행정 → 수강/채플<br><br>
+                    <b>채플 보충 방법<br></b>
+                    일일 보충 최대 2번 보충하고자하는 날짜의 2주전부터 신청 가능<br>
+                    이화포탈정보시스템 → 유레카통합행정 → 수강/채플 → 훈련학점 일일보충 신청<Br>
+                    특별 보충
+
+                </div>
+            </nav>
+
+            <nav class = "lecture">
+                <h3>강의 우선순위</h3>
+                <div>
+                    강의 우선순위는 수강신청 성공을 위해 아주 중요해요!<br> 정해진 규칙은 없지만 아래와 같은 순서를 추천합니다.<br><br>
+                    <b>경쟁률이 비슷하다는 전제 하: <br><Br></b>
+                    1. 필수교양 (필수교양은 지정된 학기에 듣지 못한다면 3학년 이후 계절 수업으로만 수강할 수 있습니다.)<br>
+                    2. 전공필수<br> 
+                    3. 전공<br>
+                    4. 교양 <br><br>
+                    *강의 종류와 상관없이 경쟁률이 2:1 이하라면 수강 신청이 수월한 편이므로 아래에 배치하는 것을 추천합니다. 
+                </div>
+            </nav>
+        </header>
+    </body>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
+        @font-face {
+            font-family: 'NanumSquareNeo-Variable';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body{
+            background-color: #153C20;
+            font-family: 'NanumSquareNeo-Variable';
+        }
+        nav{
+            padding: 75px 50px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .chrome{
+            margin: 100px 8%;
+            background-color: rgb(255, 255, 255);
+            position: fixed;
+            padding: 75px 100px;
+            top: 0;
+            left: 0;
+            /*z-index: 999;*/
+        }
+        .num{
+            margin: 800px 8%;
+            background-color: rgb(170, 209, 185);
+            z-index: 2;
+        }
+        .chapel{
+            margin: 850px 8%;
+            background-color: rgb(117, 158, 133);
+            z-index: 3;
+        }
+        .lecture{
+            margin: 950px 8%;
+            background-color: rgb(85, 124, 100);
+            z-index: 4;
+        }
+        /*nav.show {
+            position: fixed;
+        }*/
+    </style>
+</html>
