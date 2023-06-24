@@ -1,30 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ewhadule</title>
-    <link rel="stylesheet" href="style.css" />   
-</head>
-<body>
-    
-</body>
-        <header>
-            <h1>EWHADULE</h1>
-            <nav>
-              <span>강의실</span>
-              <span>시간표</span>
-              <span>수강신청</span>
-            </nav>
-        </header>
-
-        
- </body>
-
-
-
-</html> -->
 
 
 <!DOCTYPE html>
@@ -35,7 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="index.css" rel="stylesheet">
-  <title>Ewhadule</title>
+  <script src="index.js"></script>
+  <title style="font-family: 'NanumSquareNeo-Variable'; color:white;">Ewhadule</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -48,15 +22,33 @@
       <div id="navigation-bar" class="Logo">
       <a class="active"> EWHADULE </a>
       </div>
-      <div class = "nav">
-        <a> 강의실 </a>
-        <a> 시간표 </a>
-        <a> 수강신청 </a>
-      </div>
+  <ul class="menu" style="position:absolute;left:60%; top: -100px;">
+    <li>
+      <a href="#">강의실</a>
+      <ul class="submenu">
+        <li><a href="Buildingname.html">강의실 약어</a></li>
+        <li><a href="distance.html">강의실 간 거리</a></li>
+        
+      </ul>
+    </li>
+    <li>
+      <a href="#">시간표</a>
+      <ul class="submenu">
+        <li><a href="major.html">필수 교양 정보</a></li>
+        <li><a href="liberalArts.html">전공별 교과과정</a></li>
+      
+      </ul>
+    </li>
+    <li>
+      <a href="#">수강신청</a>
+      <ul class="submenu">
+        <li><a href="magician.html">에타 마법사 활용법</a></li>
+        <li><a href="aboutTip.html">수강신청 꿀팁</a></li>
+      </ul>
+    </li>
+</ul>
   </div>
-
-  <script src="index.js">
-  </script>
+  
 </body>
 
 </html>

@@ -130,3 +130,55 @@ body{
       z-index: 1;
   }
 }
+
+.menu {
+  width: 600px;
+  overflow: hidden;
+  margin: 150px auto;
+  font-size: 30px;
+  font-family: 'NanumSquareNeo-Variable';
+}
+
+.menu > li {
+  width: 200px; /*20*5=100%*/
+  float: left;
+  text-align: center;
+  line-height:40px;
+  font-family: 'NanumSquareNeo-Variable';
+  
+  background-color: #153C20;
+}
+
+.menu a {
+  color:  white;
+  font-family: 'NanumSquareNeo-Variable';
+  
+}.menu a:hover {
+  color:  #153C20;
+  
+}
+
+.submenu > li {
+  line-height: 60px;
+  background-color: #153C20;
+  color:white;
+ 
+}
+
+.submenu {
+  height: 0; /*ul의 높이를 안보이게 처리*/
+  overflow: hidden;
+  
+}
+*{padding:0;margin:0}
+li{list-style:none}
+a{text-decoration:none;font-size:20px}
+
+.menu > li:hover {
+  background-color: #cecece;
+  transition-duration: 0.5s;
+}
+
+.menu > li:hover .submenu {
+  height: 120px; /*서브메뉴 li한개의 높이 50*5*/
+  transition-duration: 1s;}
