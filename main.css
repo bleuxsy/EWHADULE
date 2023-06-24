@@ -31,11 +31,14 @@ header {
 .main_slo{
     margin-top:20px;
     font-size: 16px;
+    font-weight: 200;
 }
 .main_h1{
     margin-top:-30px;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
     font-size: 40px;
+    font-family: 'Kumar One', cursive;
+    letter-spacing: 1.5px;
 }
 .first_nav{
     text-align: center;
