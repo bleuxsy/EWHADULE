@@ -65,7 +65,7 @@ header {
 /*배경 이미지 삽입*/
 .imgfile{
     position:absolute;
-    top: 179px;
+    top: 197px;
     width: 99%;
     height: 100%;
     z-index: -1;
@@ -125,6 +125,7 @@ header {
         display: block;
         float: right;
         padding: 25px 10% 25px 90%;
+        background-color: #153C20;
         border-bottom: #fff solid 2px;
         border-top: #fff solid 2px;
         cursor: pointer;
