@@ -56,7 +56,7 @@
           </p>
 
             <nav class = "chrome">
-                <h3>크롬팝업해제</h3>
+                <h3>[크롬팝업해제]</h3><br>
                 <div>
                     1. 크롬 설정<br>
                     2. 사이드 바에서 개인정보 보호 및 보안 클릭<br>
@@ -67,7 +67,7 @@
             </nav>
 
             <nav class = "num">
-                <h3>대기순번제 vs 취소지연제</h3>
+                <h3>[대기순번제 vs 취소지연제]</h3> <br>
                 <div>
                     <b>대기순번제<br></b>
                     정원이 마감된 교과목을 신청시, 선착순으로 대기 순번 부여하여 수강신청 진행<br>
@@ -81,7 +81,7 @@
             </nav>
 
             <nav class = "chapel">
-                <h3>채플 수강신청</h3>
+                <h3>[채플 수강신청]</h3> <br>
                 <div>
                     1. 이미 수강신청된 채플을 취소하기<br>
                     2. 원하는 시간과 요일의 채플 신청하기<br><br>
@@ -96,7 +96,7 @@
             </nav>
 
             <nav class = "lecture">
-                <h3>강의 우선순위</h3>
+                <h3>[강의 우선순위]</h3> <br>
                 <div>
                     강의 우선순위는 수강신청 성공을 위해 아주 중요해요!<br> 정해진 규칙은 없지만 아래와 같은 순서를 추천합니다.<br><br>
                     <b>경쟁률이 비슷하다는 전제 하: <br><Br></b>
@@ -117,24 +117,56 @@
                 document.querySelector('.num').style.display = "none";
                 document.querySelector('.chapel').style.display = "none";
                 document.querySelector('.lecture').style.display = "none";
+                document.querySelector('#num').style.backgroundColor = "transparent";
+                document.querySelector('#num').style.color = "white";
+                document.querySelector('#chapel').style.backgroundColor = "transparent";
+                document.querySelector('#chapel').style.color = "white";
+                document.querySelector('#lecture').style.backgroundColor = "transparent";
+                document.querySelector('#lecture').style.color = "white";
+                document.querySelector('#chrome').style.backgroundColor = "white";
+                document.querySelector('#chrome').style.color = "#153C20";
             }
             if(self.getAttribute('value') === 'num'){
                 document.querySelector('.chrome').style.display = "none";
                 document.querySelector('.num').style.display = "flex";
                 document.querySelector('.chapel').style.display = "none";
                 document.querySelector('.lecture').style.display = "none";
+                document.querySelector('#chrome').style.backgroundColor = "transparent";
+                document.querySelector('#chrome').style.color = "white";
+                document.querySelector('#chapel').style.backgroundColor = "transparent";
+                document.querySelector('#chapel').style.color = "white";
+                document.querySelector('#lecture').style.backgroundColor = "transparent";
+                document.querySelector('#lecture').style.color = "white";
+                document.querySelector('#num').style.backgroundColor = "white";
+                document.querySelector('#num').style.color = "#153C20";
             }
             if(self.getAttribute('value') === 'chapel'){
                 document.querySelector('.chrome').style.display = "none";
                 document.querySelector('.num').style.display = "none";
                 document.querySelector('.chapel').style.display = "flex";
                 document.querySelector('.lecture').style.display = "none";
+                document.querySelector('#chrome').style.backgroundColor = "transparent";
+                document.querySelector('#chrome').style.color = "white";
+                document.querySelector('#num').style.backgroundColor = "transparent";
+                document.querySelector('#num').style.color = "white";
+                document.querySelector('#lecture').style.backgroundColor = "transparent";
+                document.querySelector('#lecture').style.color = "white";
+                document.querySelector('#chapel').style.backgroundColor = "white";
+                document.querySelector('#chapel').style.color = "#153C20";
             }
             if(self.getAttribute('value') === 'lecture'){
                 document.querySelector('.chrome').style.display = "none";
                 document.querySelector('.num').style.display = "none";
                 document.querySelector('.chapel').style.display = "none";
                 document.querySelector('.lecture').style.display = "flex";
+                document.querySelector('#chrome').style.backgroundColor = "transparent";
+                document.querySelector('#chrome').style.color = "white";
+                document.querySelector('#num').style.backgroundColor = "transparent";
+                document.querySelector('#num').style.color = "white";
+                document.querySelector('#chapel').style.backgroundColor = "transparent";
+                document.querySelector('#chapel').style.color = "white";
+                document.querySelector('#lecture').style.backgroundColor = "white";
+                document.querySelector('#lecture').style.color = "#153C20";
             }
         }
     </script>
