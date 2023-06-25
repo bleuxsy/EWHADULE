@@ -69,6 +69,22 @@
                 }
             }
 
+            document.addEventListener('DOMContentLoaded', function () {
+                const secNav = document.querySelector('.sec_nav');
+                const navigation = document.querySelector('.navigation');
+
+                secNav.addEventListener('mouseover', function () {
+                    navigation.style.display = 'flex';
+                });
+
+                document.addEventListener('mouseover', function (event) {
+                    const target = event.target;
+                    if (!secNav.contains(target) && !navigation.contains(target)) {
+                        navigation.style.display = 'none';
+                    }
+                });
+            });
+
             function smallClick(self){
                 if(self.getAttribute('value') === 'click'){
                     document.querySelector('.second').style.display = "flex";
