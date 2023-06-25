@@ -202,3 +202,124 @@ h2{
         font-weight:400;
 }
  
+.page-header {
+        background-color: var(--bgcolor);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        height:105px;
+        border-bottom: #fff solid 1px;
+      }
+      
+      .nav{
+        margin-right:30px;
+        display:flex;
+        width:400px;
+        justify-content: space-evenly;
+      }
+      .nav > a {
+        color: white;
+        padding: 1.5rem;
+        cursor: pointer;
+        font-family: 'NanumSquareNeo-Variable';
+      }
+      
+      .nav > a:hover {
+        background-color: #FCF6F6;
+        opacity: 0.8;
+        color:#153C20;
+      }
+      .Logo{
+        margin-top:8px;
+      }
+      .Logo a.active {
+        background-color: #153C20;
+        font-family: 'Kumar One', cursive;
+        font-size:25px;
+        margin-left: 35px;
+      }
+      
+      .menu-icon {
+        color: white;
+        cursor: pointer;
+        display: none;
+      }
+      
+      @media screen and (max-width: 700px) {
+        .nav {
+            display: none;
+            position: absolute;
+            top: 3.7rem;
+            left: 0;
+            width: 100%;
+            background-color: var(--bgcolor);
+            text-align: center;
+        }
+      
+        .Logo.responsive {
+            display: block;
+        }
+      
+        .Logo a {
+            display: block;
+        }
+      
+        .menu-icon {
+            display: block;
+            z-index: 1;
+        }
+      }
+      
+      .menu {
+        width: 600px;
+        overflow: hidden;
+        margin: 150px auto;
+        font-size: 30px;
+        font-family: 'NanumSquareNeo-Variable';
+      }
+      
+      .menu > li {
+        width: 200px; /*20*5=100%*/
+        float: left;
+        text-align: center;
+        line-height:40px;
+        font-family: 'NanumSquareNeo-Variable';
+        
+        background-color: #153C20;
+      }
+      
+      .menu a {
+        color:  white;
+        font-family: 'NanumSquareNeo-Variable';
+        
+      }.menu a:hover {
+        color:  #153C20;
+        
+      }
+      
+      .submenu > li {
+        line-height: 60px;
+        background-color: #153C20;
+        color:white;
+       
+      }
+      
+      .submenu {
+        height: 0; /*ul의 높이를 안보이게 처리*/
+        overflow: hidden;
+        
+      }
+      *{padding:0;margin:0}
+      li{list-style:none}
+      a{text-decoration:none;font-size:20px}
+      
+      .menu > li:hover {
+        background-color: #cecece;
+        transition-duration: 0.5s;
+      }
+      
+      .menu > li:hover .submenu {
+        height: 120px; /*서브메뉴 li한개의 높이 50*5*/
+        transition-duration: 1s;}
