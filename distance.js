@@ -1,7 +1,19 @@
 
-  const reback = document.querySelector(".result");
+const reback = document.querySelector(".result");
+const poscoEltecClean = document.querySelector("#poscoElte");
+const frontadClean = document.querySelector("#frontad");
+const subwayfrontClean = document.querySelector("#subwayfront");
+const frontposcotClean = document.querySelector("#frontposco");
+
+function clean(){
+  poscoEltecClean.style.display = "none";
+  frontadClean.style.display = "none";
+  subwayfrontClean.style.display = "none";
+  frontposcotClean.style.display = "none";
+}
 function loadInfo(e){
   e.preventDefault();
+  clean();
   const srcName = document.getElementById("src").value;
   const dstName = document.getElementById("dst").value;
   console.log(srcName);
