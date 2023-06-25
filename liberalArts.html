@@ -45,10 +45,10 @@
 </div>
     <div class = "selectcollege">
     <label for="select_college">단과대학 선택</label> 
-    <select name="college"> 
+    <select id="college-select" name="college"> 
         <option value="liberalArts">인문대</option> 
         <option value="social">사회대</option> 
-        <option value="social">자연대</option> 
+        <option value="natural">자연대</option> 
         <option value="social">음악대</option> 
         <option value="social">조형대</option> 
         <option value="social">경영대</option> 
@@ -70,6 +70,7 @@
         <h2>융복합교양</h2>
     </div>
     <div class = "explain">
+      <div id="content-container">
         <div class="freshman">1학년</div>
         <div class="firstSem">1학기 지정과목</div>
         <ul class = "firstcourse">
@@ -94,8 +95,10 @@
             <li>예술과 표현</li>
         </ul>
         <div class="tip">*전학년 TO가 동일하므로 학년 상관없이 졸업 전까지만 수강</div>
+        </div>
     </div>
+   
   
-
+     <script src="liberalArts.js"></script>
 </body>
 </html>
