@@ -3,9 +3,44 @@
   <head>
     <meta charset="UTF-8">
     <title>전공별 교과과정</title>
+    <link href="./index.css" rel="stylesheet">
     <link href="./major.css" rel="stylesheet">
   </head>
   <body>
+    <div class="page-header">
+      <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+        <i class="fa fa-bars"></i>
+      </a>
+  
+        <div id="navigation-bar" class="Logo">
+        <a class="active"> EWHADULE </a>
+        </div>
+    <ul class="menu" style="position:absolute;left:60%; top: -100px;">
+      <li>
+        <a href="#">강의실</a>
+        <ul class="submenu">
+          <li><a href="Buildingname.html">강의실 약어</a></li>
+          <li><a href="distance.html">강의실 간 거리</a></li>
+          
+        </ul>
+      </li>
+      <li>
+        <a href="#">시간표</a>
+        <ul class="submenu">
+          <li><a href="major.html">필수 교양 정보</a></li>
+          <li><a href="liberalArts.html">전공별 교과과정</a></li>
+        
+        </ul>
+      </li>
+      <li>
+        <a href="#">수강신청</a>
+        <ul class="submenu">
+          <li><a href="magician.html">에타 마법사 활용법</a></li>
+          <li><a href="aboutTip.html">수강신청 꿀팁</a></li>
+        </ul>
+      </li>
+  </ul>
+    </div>
     <div id="explain">
       <h3 id="title">전공별 교과과정 보는 법</h3>
       <p>교과년도: 편입생을 제외한 약학대학 편입생과 재학생은 입학년도 입력, 편입생은 (입학년도-2)를 입력</p>
@@ -18,4 +53,5 @@
       </iframe>
     </p>
   </body>
-</html>z
+  <script src="./index.js" charset="UTF-8"></script>
+</html>
