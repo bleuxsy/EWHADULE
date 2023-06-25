@@ -1,86 +1,110 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="main.css" rel="stylesheet">
     </head>
-    <body>
+    <body onload='checkTime()'>
         <header>
+            <div class="who">
+                <a href="making.html" class = "whoMadeIt">EWHADULE Creator ></a>
+            </div>
             <nav class="first_nav">
                 <h6 class="main_slo">벗들의 시간표 지킴이</h6>
                 <h1 class="main_h1">EWHADULE</h1>
             </nav>
             <nav class="sec_nav">
-                <span>강의실</span>
-                <span>시간표</span>
-                <span>수강신청</span>
+                <span onclick="navigationClick(this)" value = "click">강의실</span>
+                <span onclick="navigationClick(this)" value = "click">시간표</span>
+                <span onclick="navigationClick(this)" value = "click">수강신청</span>
             </nav>
 
-            <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+            <a id="menu-icon" class="menu-icon" onclick="smallClick(this)" value = "click">
                 <i class="fa fa-bars"></i>
             </a>
 
+            <nav class="imgfile">
+                <img src="images/Main_day.jpg" class="imgfileReal">
+            </nav>
+
+            <nav class="navigation">
+                <span class="room">
+                    <a href="building.html">강의실 약어</a>  <br><br>
+                    <a href="distance.html">강의실 간 거리</a>
+                </span>
+                <span class="schedule">
+                    <a href="liberalArts.html">필수 교양 정보</a>  <br><br>
+                    <a href="major.html">전공별 교과과정</a>
+                </span>
+                <span class="classes">
+                    <a href="magician.html">에타 마법사 활용법</a>  <br><br>
+                    <a href="aboutTip.html">수강신청 꿀팁</a>
+                </span>
+            </nav>
+
+            <nav class="navigation second">
+                <span class="room">
+                    <a href="building.html">강의실 약어</a>  <br><br>
+                    <a href="distance.html">강의실 간 거리</a>
+                </span>
+                <span class="schedule">
+                    <a href="liberalArts.html">필수 교양 정보</a>  <br><br>
+                    <a href="major.html">전공별 교과과정</a>
+                </span>
+                <span class="classes">
+                    <a href="magician.html">에타 마법사 활용법</a>  <br><br>
+                    <a href="aboutTip.html">수강신청 꿀팁</a>
+                </span>
+            </nav>
         </header>
+
+        <script>
+            function navigationClick(self){
+                if(self.getAttribute('value') === 'click'){
+                    document.querySelector('.navigation').style.display = "flex";
+                    self.setAttribute('value', 'unclick');
+                }
+                else{
+                    document.querySelector('.navigation').style.display = "none";
+                    self.setAttribute('value', 'click');
+                }
+            }
+
+            function smallClick(self){
+                if(self.getAttribute('value') === 'click'){
+                    document.querySelector('.second').style.display = "flex";
+                    self.setAttribute('value', 'unclick');
+                }
+                else{
+                    document.querySelector('.second').style.display = "none";
+                    self.setAttribute('value', 'click');
+                }
+            }
+
+            //화면 700px 넘어가면 .second 켜져있더라도 강제 꺼버리기
+            window.addEventListener('resize', function() {
+                if (window.matchMedia("(min-width: 700px)").matches) {
+                    document.querySelector('.second').style.display = "none";
+                }
+            });
+
+            //7시 되면 낮, 19시되면 밤
+            function getTime(){
+                var now = new Date();
+                var hour = now.getHours();
+                var minute = now.getMinutes(); 
+                /*console.log(hour + ": " + minute);*/
+                if(hour >= 7 && hour <= 18){
+                    document.querySelector('.imgfileReal').src = 'images/Main_day.jpg';
+                }
+                else{
+                    document.querySelector('.imgfileReal').src = 'images/Main_night.jpg';
+                }
+            }
+
+            //1초마다 돌아가며 체크용
+            function checkTime(){
+                setInterval("getTime()", 1000);
+            }
+        </script>
     </body>
-
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
-        @font-face {
-            font-family: 'NanumSquareNeo-Variable';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        body{
-            background-color: #153C20;
-            font-family: 'NanumSquareNeo-Variable';
-        }
-        header {
-            color: white;
-            background: #153C20;
-            font-weight: bold;
-        }
-        .main_slo{
-            margin-top:20px;
-            font-size: 16px;
-        }
-        .main_h1{
-            margin-top:-18px;
-            margin-bottom: 18px;
-            font-size: 40px;
-        }
-        .first_nav{
-            text-align: center;
-        }
-        .sec_nav{
-            border-bottom: #fff solid 2px;
-            border-top: #fff solid 2px;
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-        }
-        span{
-            padding: 25px 12%;
-        }
-        span:hover{
-            background-color: beige;
-            color:#153C20;
-        }
-        a{
-            display:none;
-        }
-
-        @media screen and (max-width: 700px){
-            .sec_nav{
-                display:none;
-            }
-            a{
-                display: block;
-                float: right;
-                padding: 15px 10% 15px 90%;
-                border-bottom: #fff solid 2px;
-                border-top: #fff solid 2px;
-            }
-        }
-    </style>
 </html>

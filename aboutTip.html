@@ -1,9 +1,60 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="aboutTip.css" rel="stylesheet">
     </head>
     <body>
-        <header>
+        <div class="page-header">
+            <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+              <i class="fa fa-bars"></i>
+            </a>
+        
+              <div id="navigation-bar" class="Logo">
+              <a class="active"> EWHADULE </a>
+              </div>
+          <ul class="menu" style="position:absolute;left:60%; top: -100px;">
+            <li>
+              <a href="#">강의실</a>
+              <ul class="submenu">
+                <li><a href="Buildingname.html">강의실 약어</a></li>
+                <li><a href="distance.html">강의실 간 거리</a></li>
+                
+              </ul>
+            </li>
+            <li>
+              <a href="#">시간표</a>
+              <ul class="submenu">
+                <li><a href="major.html">필수 교양 정보</a></li>
+                <li><a href="liberalArts.html">전공별 교과과정</a></li>
+              
+              </ul>
+            </li>
+            <li>
+              <a href="#">수강신청</a>
+              <ul class="submenu">
+                <li><a href="magician.html">에타 마법사 활용법</a></li>
+                <li><a href="aboutTip.html">수강신청 꿀팁</a></li>
+              </ul>
+            </li>
+        </ul>
+        </div>
+        
+        <header style="display: flex; justify-content: flex-start;">
+            <p>
+                <span id="chrome" style="position: absolute; left: 10%;" onclick = "ClickHandler(this);" value = "chrome">
+                    크롬 팝업해제
+                </span>
+                <span id="num" style="position: absolute; left: 21%;" onclick = "ClickHandler(this);" value = "num">
+                    대기순번제vs취소지연제
+                </span>
+                <span id="chapel" style="position: absolute; left: 32%;" onclick = "ClickHandler(this);" value = "chapel">
+                    채플 수강신청
+                </span>
+                <span id="lecture" style="position: absolute; left: 43%;" onclick = "ClickHandler(this);" value = "lecture">
+                    강의 우선순위
+                </span>
+          </p>
+
             <nav class = "chrome">
                 <h3>크롬팝업해제</h3>
                 <div>
@@ -59,51 +110,32 @@
         </header>
     </body>
 
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
-        @font-face {
-            font-family: 'NanumSquareNeo-Variable';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
+    <script>
+        function ClickHandler(self){
+            if(self.getAttribute('value') === 'chrome'){
+                document.querySelector('.chrome').style.display = "flex";
+                document.querySelector('.num').style.display = "none";
+                document.querySelector('.chapel').style.display = "none";
+                document.querySelector('.lecture').style.display = "none";
+            }
+            if(self.getAttribute('value') === 'num'){
+                document.querySelector('.chrome').style.display = "none";
+                document.querySelector('.num').style.display = "flex";
+                document.querySelector('.chapel').style.display = "none";
+                document.querySelector('.lecture').style.display = "none";
+            }
+            if(self.getAttribute('value') === 'chapel'){
+                document.querySelector('.chrome').style.display = "none";
+                document.querySelector('.num').style.display = "none";
+                document.querySelector('.chapel').style.display = "flex";
+                document.querySelector('.lecture').style.display = "none";
+            }
+            if(self.getAttribute('value') === 'lecture'){
+                document.querySelector('.chrome').style.display = "none";
+                document.querySelector('.num').style.display = "none";
+                document.querySelector('.chapel').style.display = "none";
+                document.querySelector('.lecture').style.display = "flex";
+            }
         }
-        body{
-            background-color: #153C20;
-            font-family: 'NanumSquareNeo-Variable';
-        }
-        nav{
-            padding: 75px 50px;
-            border-radius: 10px;
-            text-align: center;
-            line-height: 30px;
-        }
-        .chrome{
-            margin: 100px 8%;
-            background-color: rgb(255, 255, 255);
-            position: fixed;
-            padding: 75px 100px;
-            top: 0;
-            left: 0;
-            /*z-index: 999;*/
-        }
-        .num{
-            margin: 800px 8%;
-            background-color: rgb(170, 209, 185);
-            z-index: 2;
-        }
-        .chapel{
-            margin: 850px 8%;
-            background-color: rgb(117, 158, 133);
-            z-index: 3;
-        }
-        .lecture{
-            margin: 950px 8%;
-            background-color: rgb(85, 124, 100);
-            z-index: 4;
-        }
-        /*nav.show {
-            position: fixed;
-        }*/
-    </style>
+    </script>
 </html>
