@@ -287,8 +287,8 @@ p {
   color:  white;
   font-family: 'NanumSquareNeo-Variable';
   
-}.menu a:hover {
-  color:  black;
+}.menu > li> ul> li> a:hover {
+  color:  #C3FFB4;
   
 }
 

@@ -167,8 +167,8 @@ span:hover{
     color:  white;
     font-family: 'NanumSquareNeo-Variable';
     
-  }.menu a:hover {
-    color:  #153C20;
+  }.menu > li> ul> li> a:hover {
+    color:  #C3FFB4;
     
   }
   
