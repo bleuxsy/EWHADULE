@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="index.css" rel="stylesheet">
+  <link href="distance copy.css" rel="stylesheet">
+  <link href="animation.css" rel="stylesheet"
+  <script src="index.js"></script>
+
+
+
+  <title>Ewhadule</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="page-header">
+    <a id="menu-icon" class="menu-icon" onclick="onMenuClick()">
+      <i class="fa fa-bars"></i>
+    </a>
+
+      <div id="navigation-bar" class="Logo">
+      <a class="active"> EWHADULE </a>
+      </div>
+  <ul class="menu" style="position:absolute;left:60%; top: -100px;">
+    <li>
+      <a href="#">강의실</a>
+      <ul class="submenu">
+        <li><a href="Buildingname.html">강의실 약어</a></li>
+        <li><a href="distance.html">강의실 간 거리</a></li>
+        
+      </ul>
+    </li>
+    <li>
+      <a href="#">시간표</a>
+      <ul class="submenu">
+        <li><a href="major.html">필수 교양 정보</a></li>
+        <li><a href="liberalArts.html">전공별 교과과정</a></li>
+      
+      </ul>
+    </li>
+    <li>
+      <a href="#">수강신청</a>
+      <ul class="submenu">
+        <li><a href="magician.html">에타 마법사 활용법</a></li>
+        <li><a href="aboutTip.html">수강신청 꿀팁</a></li>
+      </ul>
+    </li>
+</ul>
+  </div>
+  
+<h1 style="position:absolute;color: white;font-size: 27px;font-family: 'NanumSquareNeo-Variable';left: 100px;top: 180px;">
+    두 개의 건물을 선택해주세요
+</h1>
+<div class="src_dst">
+  <form id="input">
+      <div class="distance_src">
+        <label for="src">출발 위치</label>
+        <select name="distance" id="src">
+        <option value="select">Select</option>
+        <option value="Eltec">엘텍 공과 대학</option>
+        <option value="front">정문</option>
+        <option value="back">후문</option>
+        <option value="auditorium">대강당</option>
+        <option value="subway">이대역</option>
+        <option value="ECC">ECC</option>
+        <option value="student union">학생 문화관</option>
+        <option value="posco">이화포스코관</option>
+        <option value="art">조형예술관</option>
+        <option value="edu">교육관</option>
+        </select>
+      </div>
+      <div class="distance_dst">
+        <label for="dst">도착 위치</label>
+        <select name="distance" id="dst">
+        <option value="select">Select</option>
+        <option value="Eltec">엘텍 공과 대학</option>
+        <option value="front">정문</option>
+        <option value="back">후문</option>
+        <option value="auditorium">대강당</option>
+        <option value="subway">이대역</option>
+        <option value="ECC">ECC</option>
+        <option value="student union">학생 문화관</option>
+        <option value="posco">이화포스코관</option>
+        <option value="art">조형예술관</option>
+        <option value="edu">교육관</option>
+        </select>
+        
+      </div>
+      <button type="submit" id="search">search</button>
+    </form>
+    <div class="result">
+      <div id="poscoElte" class="resultMessage">
+        <p>도보 약 13분(594m) 소요됩니다.</p>
+        <p class="tip">지름길: 포스코관 4층에서 종합과학관을 통해 가면 더 빠릅니다!</p>
+      </div>
+    </div>
+
+</div>
+<div class="map">
+</div>
+
+<!--
+<div id="kakaomap" style="position:absolute; left:300px; top:400px;">
+<div id="daumRoughmapContainer1687419363378" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+
+<script charset="UTF-8" >
+	new daum.roughmap.Lander({
+		"timestamp" : "1687419363378",
+		"key" : "2faix",
+        "mapposition" : "absolute",
+        
+		"mapWidth" : "1000",
+		"mapHeight" : "600"
+	}).render();
+</script>
+</div>
+-->
+<!--<div class="rectangle">
+<h1 style="position:absolute;color: white;font-size: 35px;font-family: 'NanumSquareNeo-Variable';left: 30%;top:35%;">도보 약 00분 (00m) 소요됩니다. </h1>
+<h2 style="position:absolute;color: white;font-size: 20px;font-family: 'NanumSquareNeo-Variable';left: 30%;top:60%;">*지름길 :</h2>
+
+<div class="box" >
+    <img class="map" src="map.png">
+  </div>
+</div>-->
+
+</body>
+<script src="distance copy.js"></script>
+</html>
